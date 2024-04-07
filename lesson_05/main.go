@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	fmt.Println("Task 1 output:")
@@ -57,7 +59,16 @@ func task3() {
 }
 
 func task4() {
-	task2()
+	var i1 int32 = 1
+	var i2 int8 = 2
+	var i3 uint8 = 3
+
+	fmt.Println(i1, &i1)
+	fmt.Println(i2, &i2)
+	fmt.Println(i3, &i3)
+
+	fmt.Println("Разница между адресами i1 и i2 = 4 (размерность int32)")
+	fmt.Println("Разница между адресами i2 и i3 = 1 (размерность int8)")
 }
 
 func change(p *int) {
