@@ -67,8 +67,8 @@ func task4() {
 	fmt.Println(i2, &i2)
 	fmt.Println(i3, &i3)
 
-	fmt.Println("Разница между адресами i1 и i2 = 4 (размерность int32)")
-	fmt.Println("Разница между адресами i2 и i3 = 1 (размерность int8)")
+	fmt.Println("Разница между 1 и 2 адресами = 4 (размерность int32)")
+	fmt.Println("Разница между 2 и 3 адресами = 1 (размерность int8)")
 }
 
 func change(p *int) {
