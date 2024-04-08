@@ -47,7 +47,6 @@ func task1() {
 func task2() {
 	i := 1
 	fmt.Println(i, &i)
-	fmt.Println()
 }
 
 func task3() {
