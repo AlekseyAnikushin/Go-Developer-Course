@@ -46,7 +46,7 @@ func task1() {
 
 func task2() {
 	i := 1
-	fmt.Printf("%d, %d", i, &i)
+	fmt.Println(i, &i)
 	fmt.Println()
 }
 
