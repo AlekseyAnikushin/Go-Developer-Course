@@ -58,12 +58,12 @@ func task4() {
 }
 
 func task5() {
-	s := make([]int, 10)
+	s := make([]int, 0, 10)
 	fmt.Println(s)
 }
 
 func task6() {
-	s := make([]int, 10)
+	s := make([]int, 0, 10)
 	s = append(s, 4, 1, 8, 9)
 	fmt.Println(s)
 }
