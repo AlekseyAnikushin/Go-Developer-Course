@@ -19,7 +19,17 @@ func main() {
 	fmt.Println()
 }
 
-func fruitMarket(fruit string) int {
+func fruitMarket(fruit string, m map[string]int) int {
+	v, ok := m[fruit]
+
+	if ok {
+		return v
+	}
+
+	return -1
+}
+
+func task1() {
 	m := map[string]int{
 		"апельсины": 5,
 		"яблоки":    3,
@@ -27,21 +37,11 @@ func fruitMarket(fruit string) int {
 		"груши":     0,
 	}
 
-	for k, v := range m {
-		if fruit == k {
-			return v
-		}
-	}
-
-	return -1
-}
-
-func task1() {
 	var fruit string
 	fmt.Println("Введите название фруктов:")
 	fmt.Scanf("%s\n", &fruit)
 
-	if quant := fruitMarket(fruit); quant >= 0 {
+	if quant := fruitMarket(fruit, m); quant >= 0 {
 		fmt.Println("Количество: ", quant)
 		return
 	}
