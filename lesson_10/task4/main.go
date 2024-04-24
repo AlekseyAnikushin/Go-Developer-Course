@@ -1,7 +1,7 @@
 package main
 
 import (
-	v1 "github.com/AlekseyAnikushin/first_module"
+	v1 "go cclean -modcachemodule1"
 )
 
 func main() {
