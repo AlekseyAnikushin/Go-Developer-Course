@@ -1,8 +1,8 @@
 package main
 
 import (
-	v1 "github.com/AlekseyAnikushin/Go-Developer-Course/lesson_10/task4/module1"
-	v2 "github.com/AlekseyAnikushin/Go-Developer-Course/lesson_10/task4/module2"
+	v1 "github.com/AlekseyAnikushin/module_1_0"
+	v2 "github.com/AlekseyAnikushin/module_1_1"
 )
 
 func main() {
