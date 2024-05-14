@@ -4,6 +4,12 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"fmt"
+	"os"
+
+	v100 "v100"
+	v110 "v110"
+	v200 "v200"
+	v210 "v210"
 )
 
 func main() {
@@ -21,6 +27,10 @@ func main() {
 
 	fmt.Println("Task 4 output:")
 	task4()
+	fmt.Println()
+
+	fmt.Println("Task 5 output:")
+	task5()
 	fmt.Println()
 }
 
@@ -126,4 +136,63 @@ func task4() {
 	}
 
 	fmt.Println(string(x))
+}
+
+func task5() {
+
+	//v100:
+	err := v100.Do("json_data", "result_v100")
+
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		f, err := os.ReadFile("result_v100")
+
+		if err != nil {
+			fmt.Println("Ошибка чтения файла result_v100")
+		}
+		fmt.Println(string(f))
+	}
+
+	//v110:
+	err = v110.Do("json_data", "result_v110")
+
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		f, err := os.ReadFile("result_v110")
+
+		if err != nil {
+			fmt.Println("Ошибка чтения файла result_v110")
+		}
+		fmt.Println(string(f))
+	}
+
+	//v200:
+	err = v200.Do("json_data", "result_v200")
+
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		f, err := os.ReadFile("result_v200")
+
+		if err != nil {
+			fmt.Println("Ошибка чтения файла result_v200")
+		}
+		fmt.Println(string(f))
+	}
+
+	//v210:
+	err = v210.Do("json_data", "result_v210")
+
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		f, err := os.ReadFile("result_v210")
+
+		if err != nil {
+			fmt.Println("Ошибка чтения файла result_v210")
+		}
+		fmt.Println(string(f))
+	}
 }
