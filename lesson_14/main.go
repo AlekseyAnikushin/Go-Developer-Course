@@ -93,8 +93,9 @@ func task5() {
 		fmt.Println("завершение работы горутины_1")
 	}()
 
+	time.Sleep(5 * time.Second)
 	stop <- struct{}{}
-	time.Sleep(time.Second)
+	stop <- struct{}{}
 
 	go func() {
 		var i int
@@ -115,8 +116,7 @@ func task5() {
 		fmt.Println("завершение работы горутины_2")
 	}()
 
-	stop <- struct{}{}
-	time.Sleep(5 * time.Second)
+	time.Sleep(time.Second)
 
 	fmt.Println("завершение работы главной горутины")
 }
